@@ -1,0 +1,96 @@
+---- Minecraft Crash Report ----
+// Don't do that.
+
+Time: 4/19/21 5:08 PM
+Description: Unexpected error
+
+java.lang.NullPointerException: Unexpected error
+	at com.d1m.client.hud.render.Hud.lambda$arrayList$1(Hud.java:40)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:390)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at com.d1m.client.hud.render.Hud.arrayList(Hud.java:37)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:168)
+	at net.minecraft.client.renderer.EntityRenderer.func_181560_a(EntityRenderer.java:1167)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1130)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at com.d1m.client.hud.render.Hud.lambda$arrayList$1(Hud.java:40)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at java.util.stream.SortedOps$RefSortingSink.end(SortedOps.java:390)
+	at java.util.stream.Sink$ChainedReference.end(Sink.java:258)
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:483)
+	at java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:472)
+	at java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:418)
+	at com.d1m.client.hud.render.Hud.arrayList(Hud.java:37)
+	at net.minecraft.client.gui.GuiIngame.renderGameOverlay(GuiIngame.java:168)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 1 total; [EntityPlayerSP['Player842'/113, l='MpServer', x=590.89, y=69.42, z=275.77]]
+	Chunk stats: MultiplayerChunkCache: 220, 220
+	Level seed: 0
+	Level generator: ID 02 - largeBiomes, ver 0. Features enabled: false
+	Level generator options: 
+	Level spawn location: 584.00,64.00,166.00 - World: (584,64,166), Chunk: (at 8,4,6 in 36,10; contains blocks 576,0,160 to 591,255,175), Region: (1,0; contains chunks 32,0 to 63,31, blocks 512,0,0 to 1023,255,511)
+	Level time: 30717 game time, 30097 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 34 total; [EntityCreeper['Creeper'/68, l='MpServer', x=577.53, y=55.00, z=202.91], EntityItem['item.item.arrow'/69, l='MpServer', x=587.13, y=69.00, z=317.41], EntityWitch['Witch'/70, l='MpServer', x=585.50, y=28.00, z=326.50], EntityWitch['Witch'/71, l='MpServer', x=585.50, y=28.00, z=329.50], EntityZombie['Zombie'/76, l='MpServer', x=604.50, y=22.00, z=243.50], EntityZombie['Zombie'/79, l='MpServer', x=615.50, y=16.00, z=201.50], EntityWitch['Witch'/80, l='MpServer', x=618.77, y=23.00, z=277.53], EntitySkeleton['Skeleton'/81, l='MpServer', x=612.69, y=32.00, z=322.81], EntityZombie['Zombie'/83, l='MpServer', x=629.28, y=13.34, z=196.28], EntityZombie['Zombie'/85, l='MpServer', x=628.84, y=21.00, z=224.69], EntitySkeleton['Skeleton'/86, l='MpServer', x=635.16, y=21.00, z=226.47], EntitySkeleton['Skeleton'/87, l='MpServer', x=638.50, y=22.00, z=289.50], EntityMinecartChest['container.minecart'/88, l='MpServer', x=630.50, y=35.06, z=324.50], EntityZombie['Zombie'/89, l='MpServer', x=634.53, y=32.00, z=346.53], EntityZombie['Zombie'/27, l='MpServer', x=524.59, y=46.00, z=203.00], EntitySpider['Spider'/28, l='MpServer', x=513.50, y=40.00, z=196.50], EntityPlayerSP['Player842'/113, l='MpServer', x=590.89, y=69.42, z=275.77], EntityBat['Bat'/29, l='MpServer', x=519.07, y=46.97, z=221.34], EntityCreeper['Creeper'/30, l='MpServer', x=515.53, y=33.00, z=212.91], EntityBat['Bat'/95, l='MpServer', x=647.57, y=23.05, z=315.57], EntitySkeleton['Skeleton'/31, l='MpServer', x=515.53, y=33.00, z=210.78], EntityBat['Bat'/96, l='MpServer', x=652.32, y=24.07, z=314.25], EntityBat['Bat'/32, l='MpServer', x=519.75, y=64.25, z=222.34], EntitySpider['Spider'/97, l='MpServer', x=643.50, y=32.00, z=332.50], EntityWitch['Witch'/33, l='MpServer', x=524.50, y=32.00, z=227.50], EntityZombie['Zombie'/34, l='MpServer', x=525.06, y=42.00, z=270.41], EntitySkeleton['Skeleton'/98, l='MpServer', x=649.50, y=32.00, z=343.50], EntitySkeleton['Skeleton'/35, l='MpServer', x=524.50, y=43.00, z=272.50], EntitySkeleton['Skeleton'/99, l='MpServer', x=642.50, y=32.00, z=350.50], EntitySkeleton['Skeleton'/100, l='MpServer', x=641.50, y=32.00, z=352.50], EntitySkeleton['Skeleton'/42, l='MpServer', x=531.50, y=32.00, z=211.50], EntitySkeleton['Skeleton'/43, l='MpServer', x=532.50, y=32.00, z=213.50], EntityBat['Bat'/44, l='MpServer', x=526.80, y=64.03, z=220.02], EntityZombie['Zombie'/51, l='MpServer', x=559.50, y=36.00, z=318.50]]
+	Retry entities: 0 total; []
+	Server brand: vanilla
+	Server type: Integrated singleplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:380)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2751)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:450)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 554272032 bytes (528 MB) / 741343232 bytes (707 MB) up to 3803185152 bytes (3627 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 98
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce RTX 2080 SUPER/PCIe/SSE2 GL version 4.6.0 NVIDIA 466.11, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: §5p4nda faithful.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 3600X 6-Core Processor 

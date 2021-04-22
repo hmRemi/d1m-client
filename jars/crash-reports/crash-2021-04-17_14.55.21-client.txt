@@ -1,0 +1,80 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 4/17/21 2:55 PM
+Description: Unexpected error
+
+java.lang.IndexOutOfBoundsException: Index: 0, Size: 0
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.d1m.client.hud.render.tabgui.TabGui.enter(TabGui.java:128)
+	at com.d1m.client.hud.render.tabgui.TabGui.right(TabGui.java:117)
+	at com.d1m.client.hud.render.tabgui.TabGui.actionEvent(TabGui.java:143)
+	at net.minecraft.client.Minecraft.runTick(Minecraft.java:1927)
+	at net.minecraft.client.Minecraft.runGameLoop(Minecraft.java:1104)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:421)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at java.util.ArrayList.rangeCheck(ArrayList.java:657)
+	at java.util.ArrayList.get(ArrayList.java:433)
+	at com.d1m.client.hud.render.tabgui.TabGui.enter(TabGui.java:128)
+	at com.d1m.client.hud.render.tabgui.TabGui.right(TabGui.java:117)
+	at com.d1m.client.hud.render.tabgui.TabGui.actionEvent(TabGui.java:143)
+
+-- Affected level --
+Details:
+	Level name: MpServer
+	All players: 5 total; [EntityPlayerSP['borrell98'/118761, l='MpServer', x=98.21, y=105.00, z=-1.50], EntityOtherPlayerMP['cd1371af6f'/2147483646, l='MpServer', x=107.50, y=105.00, z=-3.50], EntityOtherPlayerMP['8d9ea57c3e'/2147483647, l='MpServer', x=106.50, y=105.00, z=-7.50], EntityOtherPlayerMP['170555fc82'/2147483643, l='MpServer', x=106.50, y=105.00, z=4.50], EntityOtherPlayerMP['ebd87f9d5f'/2147483644, l='MpServer', x=107.50, y=105.00, z=0.50]]
+	Chunk stats: MultiplayerChunkCache: 81, 81
+	Level seed: 0
+	Level generator: ID 00 - default, ver 1. Features enabled: false
+	Level generator options: 
+	Level spawn location: 0.00,65.00,0.00 - World: (0,65,0), Chunk: (at 0,4,0 in 0,0; contains blocks 0,0,0 to 15,255,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 447727 game time, 1 day time
+	Level dimension: 0
+	Level storage version: 0x00000 - Unknown?
+	Level weather: Rain time: 0 (now: false), thunder time: 0 (now: false)
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Forced entities: 29 total; [EntityPlayerSP['borrell98'/118761, l='MpServer', x=98.21, y=105.00, z=-1.50], EntityOtherPlayerMP['8d9ea57c3e'/2147483647, l='MpServer', x=106.50, y=105.00, z=-7.50], EntityOtherPlayerMP['cd1371af6f'/2147483646, l='MpServer', x=107.50, y=105.00, z=-3.50], EntityOtherPlayerMP['ebd87f9d5f'/2147483644, l='MpServer', x=107.50, y=105.00, z=0.50], EntityOtherPlayerMP['170555fc82'/2147483643, l='MpServer', x=106.50, y=105.00, z=4.50], EntityOtherPlayerMP['cd1371af6f'/2147483646, l='MpServer', x=107.50, y=105.00, z=-3.50], EntityOtherPlayerMP['8d9ea57c3e'/2147483647, l='MpServer', x=106.50, y=105.00, z=-7.50], EntityOtherPlayerMP['170555fc82'/2147483643, l='MpServer', x=106.50, y=105.00, z=4.50], EntityOtherPlayerMP['ebd87f9d5f'/2147483644, l='MpServer', x=107.50, y=105.00, z=0.50], EntityArmorStand['§3»§b»§f» §b§lStore §f«§b«§3«'/36, l='MpServer', x=99.50, y=107.16, z=5.50], EntityArmorStand['§fClick to get a link to our store'/37, l='MpServer', x=99.50, y=106.91, z=5.50], EntityArmorStand['§3»§b»§f» §b§lDiscord §f«§b«§3«'/38, l='MpServer', x=99.50, y=107.16, z=-8.50], EntityArmorStand['§fClick to get a link to our discord'/39, l='MpServer', x=99.50, y=106.91, z=-8.50], EntityArmorStand['§b§lPractice'/40, l='MpServer', x=107.50, y=107.75, z=-3.50], EntityArmorStand['§fStatus§7: §f§aOnline'/41, l='MpServer', x=107.50, y=107.50, z=-3.50], EntityArmorStand['§fOnline§7: §a221/500'/42, l='MpServer', x=107.50, y=107.25, z=-3.50], EntityArmorStand['§7§o((Right-click me)'/43, l='MpServer', x=107.50, y=107.00, z=-3.50], EntityArmorStand['§b§lKitMap'/44, l='MpServer', x=107.50, y=107.75, z=0.50], EntityArmorStand['§fStatus§7: §f§aOnline'/45, l='MpServer', x=107.50, y=107.50, z=0.50], EntityArmorStand['§fOnline§7: §a52/500'/46, l='MpServer', x=107.50, y=107.25, z=0.50], EntityArmorStand['§7§o((Right-click me)'/47, l='MpServer', x=107.50, y=107.00, z=0.50], EntityArmorStand['§b§lSkyBlock'/48, l='MpServer', x=106.50, y=107.75, z=4.50], EntityArmorStand['§fStatus§7: §f§cOffline'/49, l='MpServer', x=106.50, y=107.50, z=4.50], EntityArmorStand['§fOnline§7: §a0/500'/50, l='MpServer', x=106.50, y=107.25, z=4.50], EntityArmorStand['§7§o((Right-click me)'/51, l='MpServer', x=106.50, y=107.00, z=4.50], EntityArmorStand['§b§lHCF'/52, l='MpServer', x=106.50, y=107.75, z=-7.50], EntityArmorStand['§fStatus§7: §cSoon'/53, l='MpServer', x=106.50, y=107.50, z=-7.50], EntityArmorStand['§fOnline§7: §a2/500'/54, l='MpServer', x=106.50, y=107.25, z=-7.50], EntityArmorStand['§7§o((Right-click me)'/55, l='MpServer', x=106.50, y=107.00, z=-7.50]]
+	Retry entities: 0 total; []
+	Server brand: FlameCord <- vSpigot
+	Server type: Non-integrated multiplayer server
+Stacktrace:
+	at net.minecraft.client.multiplayer.WorldClient.addWorldInfoToCrashReport(WorldClient.java:380)
+	at net.minecraft.client.Minecraft.addGraphicsAndWorldToCrashReport(Minecraft.java:2751)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:450)
+	at net.minecraft.client.main.Main.main(Main.java:113)
+	at Start.main(Start.java:11)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8.8
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 395036208 bytes (376 MB) / 1500512256 bytes (1431 MB) up to 3803185152 bytes (3627 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	Launched Version: mcp
+	LWJGL: 2.9.4
+	OpenGL: NVIDIA GeForce RTX 2080 SUPER/PCIe/SSE2 GL version 4.6.0 NVIDIA 465.89, NVIDIA Corporation
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: No
+	Is Modded: Very likely; Jar signature invalidated
+	Type: Client (map_client.txt)
+	Resource Packs: !              §4§lUltimate Red §b§l16x §dby §b§lVeroxus.zip
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 3600X 6-Core Processor 
